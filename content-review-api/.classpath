@@ -5,7 +5,6 @@
 	<classpathentry kind="src" path="public/src/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="var" path="MAVEN_REPO/generic-dao/jars/generic-dao-0.9.jar"/>
-	<classpathentry kind="var" path="MAVEN_REPO/sakaiproject/jars/sakai-user-api-2.3.x.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/content-api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/site-api"/>
 	<classpathentry kind="output" path="bin"/>
