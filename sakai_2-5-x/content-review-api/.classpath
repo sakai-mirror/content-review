@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="logic/src/java"/>
+	<classpathentry kind="src" path="model/src/java"/>
+	<classpathentry kind="src" path="public/src/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="M2_REPO/org/sakaiproject/generic-dao/0.9.1/generic-dao-0.9.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/content-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/site-api"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
