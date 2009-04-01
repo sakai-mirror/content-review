@@ -199,4 +199,9 @@ public interface ContentReviewService {
 	 */
 	public boolean allowResubmission();
 	
+	/**
+	 *  Remove an item from the review Queue
+	 * @param ContentId
+	 */
+	public void removeFromQueue(String ContentId);
 }
