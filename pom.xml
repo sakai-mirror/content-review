@@ -11,9 +11,9 @@
 	<artifactId>contentreview</artifactId>
 	<name>Sakai Content Review API</name>
 	<scm>
-		<connection>scm:svn:https://source.sakaiproject.org/svn/content-review/trunk</connection>
-		<developerConnection>scm:svn:https://source.sakaiproject.org/svn/content-review/trunk</developerConnection>
-		<url>https://source.sakaiproject.org/svn/content-review/trunk</url>
+		<connection>scm:svn:https://source.sakaiproject.org/svn/content-review/branches/sakai-2.7.x</connection>
+		<developerConnection>scm:svn:https://source.sakaiproject.org/svn/content-review/branches/sakai-2.7.x</developerConnection>
+		<url>https://source.sakaiproject.org/svn/content-review/branches/sakai-2.7.x</url>
 	</scm>
 	<packaging>pom</packaging>
 	<modules>
