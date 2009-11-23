@@ -1,8 +1,8 @@
 <projectDescription>
-  <name>sakai-contentreview-service-api</name>
+  <name>contentreview-service-api</name>
   <comment></comment>
   <projects>
-    <project>sakai-contentreview-model-api</project>
+    <project>contentreview-model-api</project>
   </projects>
   <buildSpec>
     <buildCommand>
