@@ -1,0 +1,18 @@
+<projectDescription>
+  <name>sakai-contentreview-service-api</name>
+  <comment></comment>
+  <projects>
+    <project>sakai-content-api</project>
+    <project>sakai-contentreview-model-api</project>
+    <project>sakai-site-api</project>
+    <project>sakai-user-api</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>
