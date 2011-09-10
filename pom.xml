@@ -20,6 +20,7 @@
 		<module>content-review-api/model</module>
 		<module>content-review-api/public</module>
 	</modules>
+<!-- 
 <distributionManagement>
 	  <downloadUrl>http://source.sakaiproject.org/maven2/</downloadUrl>
 		<snapshotRepository>
@@ -37,4 +38,5 @@
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
+-->
 </project>
