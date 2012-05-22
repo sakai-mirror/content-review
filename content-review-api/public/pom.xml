@@ -25,10 +25,5 @@
 			<groupId>org.sakaiproject.contentreview</groupId>
 			<artifactId>contentreview-model-api</artifactId>
 		</dependency>
-		<!-- generic DAO -->
-		<!-- sakai dependencies -->
-		<!--org.sakaiprojectsakai-user-api${sakai.version}-->
-		<!--org.sakaiprojectsakai-site-api${sakai.version}-->
-		<!--org.sakaiprojectsakai-content-api${sakai.version}-->
 	</dependencies>
 </project>
