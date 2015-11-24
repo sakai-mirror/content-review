@@ -306,4 +306,35 @@ public interface ContentReviewService {
 	 */
 	public void createAssignment(String siteId, String taskId, Map extraAsnnOpts)
 	throws SubmissionException, TransientSubmissionException;
+	
+	/**
+	 * Get the URL of a report constructed using the old API for a student
+	 * @param contentId
+	 * @return
+	 * @throws QueueException
+	 * @throws ReportException
+	 * */
+	public String getLegacyReviewReportStudent(String contentId)
+	throws QueueException, ReportException;
+	
+	/**
+	 * Get the URL for a report constructed using the old API for an Instructor
+	 * 
+	 * @param contentId
+	 * @return
+	 * @throws QueueException
+	 * @throws ReportException
+	 */
+	public String getLegacyReviewReportInstructor(String contentId)
+	throws QueueException, ReportException;
+	
+	/**
+	 * Get the URL to access the LTI tool associated with the task
+	 * 
+	 * @param taskId
+	 * @return
+	 * @throws QueueException
+	 * @throws ReportException
+	 */
+	public String getLTIAccess(String taskId, String siteId);
 }
