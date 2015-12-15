@@ -54,6 +54,8 @@ public interface ContentReviewService {
 	public void queueContent(String userId, String siteId, String taskId, String contentId)
 	throws QueueException;
 	
+	public void queueContent(String userId, String siteId, String taskId, String contentId, String submissionId) throws QueueException;
+	
 	/**
 	 *  Retrieve a score for a specific item
 	 * @param contentId
@@ -337,4 +339,7 @@ public interface ContentReviewService {
 	 * @throws ReportException
 	 */
 	public String getLTIAccess(String taskId, String siteId);
+	
+	public ContentReviewItem getItemBySubmissionId(String submissionId);
+	public boolean updateItemAccess(String submissionId);
 }

@@ -41,7 +41,7 @@ public class ContentReviewItem {
 	public static final String SUBMISSION_ERROR_NO_RETRY = "Error occurred submitting content - will not retry";
 	public static final Long SUBMISSION_ERROR_NO_RETRY_CODE = new Long(5);
 	
-	public static final String SUBMISSION_ERROR_USER_DETAILS = "Error occurred submitting content - inconplete or Ivalid user details";
+	public static final String SUBMISSION_ERROR_USER_DETAILS = "Error occurred submitting content - incomplete or invalid user details";
 	public static final Long SUBMISSION_ERROR_USER_DETAILS_CODE = new Long(6);
 	
 	public static final String REPORT_ERROR_RETRY = "Temporary error occurred retrieving report - will retry";
@@ -51,6 +51,8 @@ public class ContentReviewItem {
 	public static final Long REPORT_ERROR_NO_RETRY_CODE = new Long(8);
 	
 	public static final Long SUBMISSION_ERROR_RETRY_EXCEEDED = new Long(9);
+	
+	//TODO add new errors
 	
 	private Long id; //hibernate uses this as a primary key
 	private String contentId; //Sakai contentId
@@ -71,6 +73,11 @@ public class ContentReviewItem {
 	private String lastError;
 	private String iconUrl;
 	private Long retryCount;
+	
+	private boolean ltiIntegration;
+	private boolean urlAccessed;
+	private String submissionId;
+	
 	/**
 	 * Default constructor
 	 */
@@ -93,6 +100,9 @@ public class ContentReviewItem {
 		this.reviewScore = null;
 		this.taskId = null;
 		this.retryCount = null;
+		this.ltiIntegration = false;
+		this.urlAccessed = false;
+		this.submissionId = null;
 	}
 	
 	/**
@@ -116,6 +126,9 @@ public class ContentReviewItem {
 		this.reviewScore = null;
 		this.taskId = taskId;
 		this.id = null;
+		this.ltiIntegration = false;
+		this.urlAccessed = false;
+		this.submissionId = null;
 	}
 
 	/**
@@ -134,6 +147,9 @@ public class ContentReviewItem {
 		this.status = status;
 		this.reviewScore = reviewScore;
 		this.taskId = taskId;
+		this.ltiIntegration = false;
+		this.urlAccessed = false;
+		this.submissionId = null;
 	}
 
 	
@@ -275,5 +291,29 @@ public class ContentReviewItem {
 	 */
 	public void setErrorCode(Integer errorCode) {
 		this.errorCode = errorCode;
+	}
+	
+	public boolean isUrlAccessed(){
+		return urlAccessed;
+	}
+	
+	public void setUrlAccessed(boolean urlAccessed) {
+		this.urlAccessed = urlAccessed;
+	}
+	
+	public boolean isLtiIntegration(){
+		return ltiIntegration;
+	}
+	
+	public void setLtiIntegration(boolean ltiIntegration) {
+		this.ltiIntegration = ltiIntegration;
+	}
+	
+	public String getSubmissionId() {
+		return submissionId;
+	}
+
+	public void setSubmissionId(String submissionId) {
+		this.submissionId = submissionId;
 	}
 }
