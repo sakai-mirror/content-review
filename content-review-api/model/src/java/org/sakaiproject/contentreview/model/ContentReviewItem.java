@@ -74,9 +74,9 @@ public class ContentReviewItem {
 	private String iconUrl;
 	private Long retryCount;
 	
-	private boolean ltiIntegration;
 	private boolean urlAccessed;
 	private String submissionId;
+	private boolean resubmission;
 	
 	/**
 	 * Default constructor
@@ -100,9 +100,9 @@ public class ContentReviewItem {
 		this.reviewScore = null;
 		this.taskId = null;
 		this.retryCount = null;
-		this.ltiIntegration = false;
 		this.urlAccessed = false;
 		this.submissionId = null;
+		this.resubmission = false;
 	}
 	
 	/**
@@ -126,9 +126,9 @@ public class ContentReviewItem {
 		this.reviewScore = null;
 		this.taskId = taskId;
 		this.id = null;
-		this.ltiIntegration = false;
 		this.urlAccessed = false;
 		this.submissionId = null;
+		this.resubmission = false;
 	}
 
 	/**
@@ -147,9 +147,9 @@ public class ContentReviewItem {
 		this.status = status;
 		this.reviewScore = reviewScore;
 		this.taskId = taskId;
-		this.ltiIntegration = false;
 		this.urlAccessed = false;
 		this.submissionId = null;
+		this.resubmission = false;
 	}
 
 	
@@ -301,19 +301,19 @@ public class ContentReviewItem {
 		this.urlAccessed = urlAccessed;
 	}
 	
-	public boolean isLtiIntegration(){
-		return ltiIntegration;
-	}
-	
-	public void setLtiIntegration(boolean ltiIntegration) {
-		this.ltiIntegration = ltiIntegration;
-	}
-	
 	public String getSubmissionId() {
 		return submissionId;
 	}
 
 	public void setSubmissionId(String submissionId) {
 		this.submissionId = submissionId;
+	}
+	
+	public boolean isResubmission(){
+		return resubmission;
+	}
+	
+	public void setResubmission(boolean resubmission) {
+		this.resubmission = resubmission;
 	}
 }

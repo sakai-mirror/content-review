@@ -54,7 +54,29 @@ public interface ContentReviewService {
 	public void queueContent(String userId, String siteId, String taskId, String contentId)
 	throws QueueException;
 	
+	/**
+	 *  Add an item to the Queue for Submission to Turnitin
+	 *  
+	 *  @param userID if nulll current user is used
+	 *  @param SiteId is null current site is used
+	 *  @param Entity reference to the task this is for
+	 *  @param Reference to the content object that should be submitted
+	 *  @param Reference to the submission object
+	 *  
+	 */
 	public void queueContent(String userId, String siteId, String taskId, String contentId, String submissionId) throws QueueException;
+	
+	/**
+	 *  Add an resubmitted item to the Queue for Submission to Turnitin
+	 *  
+	 *  @param userID if nulll current user is used
+	 *  @param SiteId is null current site is used
+	 *  @param Entity reference to the task this is for
+	 *  @param Reference to the content object that should be submitted
+	 *  @param Reference to the submission object
+	 *  
+	 */
+	public void queueResubContent(String userId, String siteId, String taskId, String contentId, String submissionId) throws QueueException;
 	
 	/**
 	 *  Retrieve a score for a specific item
@@ -217,6 +239,15 @@ public interface ContentReviewService {
 	public boolean isSiteAcceptable(Site site);
 	
 	/**
+	 *  Can this site make use of the direct TII submission mode
+	 * 
+	 * @param site
+	 * @return
+	 * 
+	 */
+	public boolean isDirectAccess(Site s);
+	
+	/**
 	 *  Get a icon URL that for a specific score
 	 * @param score
 	 * @return
@@ -340,6 +371,21 @@ public interface ContentReviewService {
 	 */
 	public String getLTIAccess(String taskId, String siteId);
 	
-	public ContentReviewItem getItemBySubmissionId(String submissionId);
-	public boolean updateItemAccess(String submissionId);
+	/**
+	 * Get the ContentReviewItem that matches the params
+	 * 
+	 * @param submissionId
+	 * @param contentId
+	 * @return
+	 */
+	public ContentReviewItem getItemBySubmissionId(String submissionId, String contentId);
+	
+	/**
+	 * Sets the url as accessed for a submission
+	 * 
+	 * @param submissionId
+	 * @param contentId
+	 * @return
+	 */
+	public boolean updateItemAccess(String submissionId, String contentId);
 }
