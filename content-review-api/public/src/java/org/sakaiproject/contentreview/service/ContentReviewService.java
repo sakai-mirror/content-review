@@ -230,6 +230,13 @@ public interface ContentReviewService {
 	public boolean isAcceptableContent(ContentResource resource);
 	
 	/**
+	 * Is the content resource of a size that can be accepted by the service implementation
+	 * @param resource
+	 * @return
+	 */
+	public boolean isAcceptableSize(ContentResource resource);
+	
+	/**
 	 *  Can this site make use of the content review service
 	 * 
 	 * @param site
@@ -253,6 +260,13 @@ public interface ContentReviewService {
 	 * @return
 	 */
 	public String getIconUrlforScore(Long score);
+	
+	/**
+	 *  Get a icon colour for a specific score
+	 * @param score
+	 * @return
+	 */
+	public String getIconColorforScore(Long score);
 	
 	/**
 	 *  Does the service support resubmissions?
