@@ -52,8 +52,6 @@ public class ContentReviewItem {
 	
 	public static final Long SUBMISSION_ERROR_RETRY_EXCEEDED = new Long(9);
 	
-	//TODO add new errors
-	
 	private Long id; //hibernate uses this as a primary key
 	private String contentId; //Sakai contentId
 	private String userId; // Sakai userId
@@ -77,6 +75,7 @@ public class ContentReviewItem {
 	private boolean urlAccessed;
 	private String submissionId;
 	private boolean resubmission;
+	private String externalGrade;
 	
 	/**
 	 * Default constructor
@@ -103,6 +102,7 @@ public class ContentReviewItem {
 		this.urlAccessed = false;
 		this.submissionId = null;
 		this.resubmission = false;
+		this.externalGrade = null;
 	}
 	
 	/**
@@ -129,6 +129,7 @@ public class ContentReviewItem {
 		this.urlAccessed = false;
 		this.submissionId = null;
 		this.resubmission = false;
+		this.externalGrade = null;
 	}
 
 	/**
@@ -150,6 +151,7 @@ public class ContentReviewItem {
 		this.urlAccessed = false;
 		this.submissionId = null;
 		this.resubmission = false;
+		this.externalGrade = null;
 	}
 
 	
@@ -315,5 +317,13 @@ public class ContentReviewItem {
 	
 	public void setResubmission(boolean resubmission) {
 		this.resubmission = resubmission;
+	}
+	
+	public String getExternalGrade(){
+		return externalGrade;
+	}
+	
+	public void setExternalGrade(String externalGrade) {
+		this.externalGrade = externalGrade;
 	}
 }

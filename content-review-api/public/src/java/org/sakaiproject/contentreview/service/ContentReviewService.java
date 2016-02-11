@@ -386,20 +386,42 @@ public interface ContentReviewService {
 	public String getLTIAccess(String taskId, String siteId);
 	
 	/**
-	 * Get the ContentReviewItem that matches the params
+	 * Get the ContentReviewItem that matches the id
 	 * 
-	 * @param submissionId
-	 * @param contentId
+	 * @param id
 	 * @return
 	 */
-	public ContentReviewItem getItemBySubmissionId(String submissionId, String contentId);
+	public ContentReviewItem getItemById(String id);
 	
 	/**
-	 * Sets the url as accessed for a submission
+	 * Get the first ContentReviewItem that matches the param
 	 * 
-	 * @param submissionId
+	 * @param id
+	 * @return
+	 */
+	public ContentReviewItem getFirstItemByContentId(String contentId);
+	
+	/**
+	 * Sets the url as accessed for a submission content
+	 * 
 	 * @param contentId
 	 * @return
 	 */
-	public boolean updateItemAccess(String submissionId, String contentId);
+	public boolean updateItemAccess(String contentId);
+	
+	/**
+	 * Sets the grade for a submission content
+	 * 
+	 * @param contentId
+	 * @return
+	 */
+	public boolean updateExternalGrade(String contentId, String score);
+	
+	/**
+	 * Gets the grade for a submission content
+	 * 
+	 * @param contentId
+	 * @return
+	 */
+	public String getExternalGradeForContentId(String contentId);
 }
