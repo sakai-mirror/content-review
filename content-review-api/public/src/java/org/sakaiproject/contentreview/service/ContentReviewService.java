@@ -43,7 +43,7 @@ import org.sakaiproject.contentreview.model.ContentReviewItem;
 public interface ContentReviewService {
 	
 	/**
-	 *  Add an item to the Queue for Submission to Turnitin
+	 *  Add an item to the Queue for Submission
 	 *  
 	 *  @param userID if nulll current user is used
 	 *  @param SiteId is null current site is used
@@ -55,7 +55,7 @@ public interface ContentReviewService {
 	throws QueueException;
 	
 	/**
-	 *  Add an item to the Queue for Submission to Turnitin
+	 *  Add an item to the Queue for Submission
 	 *  
 	 *  @param userID if nulll current user is used
 	 *  @param SiteId is null current site is used
@@ -379,11 +379,23 @@ public interface ContentReviewService {
 	 * Get the URL to access the LTI tool associated with the task
 	 * 
 	 * @param taskId
+	 * @param siteId
 	 * @return
 	 * @throws QueueException
 	 * @throws ReportException
 	 */
 	public String getLTIAccess(String taskId, String siteId);
+	
+	/**
+	 * Delete the LTI tool associated with the task
+	 * 
+	 * @param taskId
+	 * @param siteId
+	 * @return
+	 * @throws QueueException
+	 * @throws ReportException
+	 */
+	public boolean deleteLTITool(String taskId, String siteId);
 	
 	/**
 	 * Get the ContentReviewItem that matches the id
